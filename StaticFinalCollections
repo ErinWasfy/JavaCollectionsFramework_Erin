@@ -1,0 +1,5 @@
+*Create example of final static collections.
+
+//Assume that we have a function that returns a list of objects
+
+public static final 
