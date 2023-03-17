@@ -1,0 +1,18 @@
+*Try to add and change elements in the set while iterating with an iterator.
+
+Let's just assume that we have got a list of data and this list needs to be iterated as follows:
+Class CollectionWithSet
+{
+public void myMethod()
+{
+Set<String> myMainSet= new HashSet<String>();
+  myMainSet.add("Traingle");
+  myMainSet.add("Square");
+  myMainSet.add("Rectangle");
+  Iterator<String> iterator=myMainSet.iterator();
+  while(iterator.next())
+  {
+      System.out.println("My Set: "+iterator.next());
+  }
+}
+}
