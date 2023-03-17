@@ -1,0 +1,13 @@
+Implement your own list. It should work with all collection api and with all methods of List.
+
+public Collections getListOfRequests()
+{
+ List<String> list=new ArrayList<>();
+ list.add("Request A");
+ list.add("Request B");
+ Iterator<String> iterator=list.iterator();
+ while(iterator.next())
+ {
+  System.Out.PrintLn("List of Requests: "+iterator.next());
+ }
+}
