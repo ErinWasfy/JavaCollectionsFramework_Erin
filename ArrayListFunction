@@ -1,7 +1,7 @@
 *Try to add and change elements in the set while iterating with an iterator.
 
 Let's just assume that we have got a list of data and this list needs to be iterated as follows:
-Class CollectionWithSet
+public Class CollectionWithSet
 {
 public static Collection<?> getListOfData(List<? super Object> myData)
 {
