@@ -1,0 +1,9 @@
+Sort list in descending order
+public static void sortedTreeSetInDescendingOrder()
+{
+    TreeSet<String> treeSet=new TreeSet<>();
+    treeSet.add("Peter");
+    treeSet.add("Aram");
+    treeSet.stream().sorted((s,d)->Character.compare(s.charAt(1),d.charAt(1))).sorted().forEach(System.out::println);
+
+}
