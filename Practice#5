@@ -1,0 +1,8 @@
+//Assume that we have a function that returns a list of objects
+
+private final static Collection<? super Object> myColl;
+static {
+    Set<? super Object> myList=new HashSet<>();
+    myList.add("Test");
+    myColl=myList;
+}
