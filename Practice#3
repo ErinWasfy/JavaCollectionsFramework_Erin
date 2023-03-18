@@ -1,0 +1,5 @@
+public static void sortedListInDescendingOrder(List<String> myData)
+{
+     myData.stream().sorted(Comparator.reverseOrder()).forEach(System.out::println);
+
+}
