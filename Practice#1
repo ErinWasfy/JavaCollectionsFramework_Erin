@@ -1,4 +1,3 @@
-Implement your own list. It should work with all collection api and with all methods of List.
 Class CustomList
 {
 private static void myCustomStandardList()
