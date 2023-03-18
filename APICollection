@@ -12,6 +12,7 @@ private static void myCustomStandardList()
         System.out.println(iterator.next());
     }
 }
+
 //Another scenario added as an example of collections API
 enum ColorEnum{
     Orange,White,Yellow
