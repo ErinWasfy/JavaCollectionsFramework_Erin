@@ -10,3 +10,14 @@ public class Singleton<T> {
 }
 
 //It won't compile because the static field isn't allowed to be added to Parameter T
+
+
+Will the following class compile? If not, why?
+
+public final class Algorithm {
+  public static <T> T max(T x, T y) {
+	return x > y ? x : y;
+  }
+}
+
+It won't compile because the operator doesn't work with the non primitive types especially Objects,Classes,etc.
