@@ -2,7 +2,7 @@ Create a treeset with your comparator which will sort Strings from the second le
 
 public static void sortedTreeSetInDescendingOrder()
 {
-    SortedSet<String> treeSet=new TreeSet<>();
+    Set<String> treeSet=new TreeSet<>();
     treeSet.add("Peter");
     treeSet.add("Aram");
     treeSet.stream().sorted((s,d)->Character.compare(s.charAt(1),d.charAt(1))).sorted().forEach(System.out::println);
