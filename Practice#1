@@ -1,28 +1,103 @@
-Class CustomList
-{
-private static void myCustomStandardList()
-{
-    List<? super Object> myList=new ArrayList<>();
-    myList.add("test");
-    myList.add("test");
-    Iterator<?> iterator=myList.iterator();
-    while (iterator.hasNext())
-    {
-        System.out.println(iterator.next());
-    }
-}
+import javax.swing.text.html.HTMLDocument;
+import java.util.*;
 
-//Another scenario added as an example of collections API
-enum ColorEnum{
-    Orange,White,Yellow
-}
-private void myCustomEnumList()
-{
-    Set<ColorEnum> mySet=EnumSet.allOf(ColorEnum.class);
-    Iterator<ColorEnum> iterator=mySet.iterator();
-    while (iterator.hasNext())
-    {
-        System.out.println(iterator.next());
+public class CustomList implements List {
+Collection myOwnList=new ArrayList();
+    @Override
+    public int size() {
+        return 0;
     }
-}
+
+    @Override
+    public boolean isEmpty() {
+        return false;
+    }
+
+    @Override
+    public boolean contains(Object o) {
+        if(!myOwnList.contains(o))
+           return false;
+      return true;
+    }
+
+    @Override
+    public Iterator iterator() {
+        Iterator iterator=myOwnList.iterator();
+        return iterator;
+    }
+
+    @Override
+    public Object[] toArray() {
+        return myOwnList.toArray();
+    }
+
+    @Override
+    public boolean add(Object o) {
+        myOwnList.add(o);
+        if(myOwnList.contains(0))
+            return true;
+        return false;
+    }
+
+    @Override
+    public boolean remove(Object o) {
+        myOwnList.remove(o);
+        if(myOwnList.contains(0))
+            return false;
+        return true;
+    }
+
+    @Override
+    public boolean addAll(Collection c) {
+        if(myOwnList.containsAll(c))
+            return true;
+        return false;
+    }
+
+    @Override
+    public boolean addAll(int index, Collection c) {
+        return false;
+    }
+
+    @Override
+    public void clear() {
+
+    }
+
+    @Override
+    public Object get(int index) {
+        return null;
+    }
+
+    @Override
+    public Object set(int index, Object element) {
+        return null;
+    }
+
+    @Override
+    public void add(int index, Object element) {
+
+    }
+
+    @Override
+    public Object remove(int index) {
+        return null;
+    }
+
+    @Override
+    public int indexOf(Object o) {
+        return 0;
+    }
+
+    @Override
+    public int lastIndexOf(Object o) {
+        return 0;
+    }
+
+    @Override
+    public ListIterator listIterator() {
+        return (ListIterator) myOwnList;
+    }
+    
+    
 }
