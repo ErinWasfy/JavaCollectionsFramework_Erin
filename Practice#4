@@ -1,8 +1,22 @@
-public static void sortedTreeSetInDescendingOrder()
-{
-    Set<String> treeSet=new TreeSet<>();
-    treeSet.add("Peter");
-    treeSet.add("Aram");
-    treeSet.stream().sorted((s,d)->Character.compare(s.charAt(1),d.charAt(1))).sorted().forEach(System.out::println);
+import java.util.Comparator;
+import java.util.Set;
 
+public class TreeSet implements Comparator<String> {
+
+    @Override
+    public int compare(String o1, String o2) {
+        return o2.compareTo(o1);
+    }
+    public class TreeSetClient
+    {
+        public static void main(String[] args)
+        {
+            Set<String> mySet=new java.util.TreeSet<String>(new TreeSet());
+            mySet.add("Vague");
+            mySet.add("Illumination");
+            System.out.println("Treeset in descending order is "+mySet);
+
+        }
+    }
 }
+
