@@ -1,5 +1,58 @@
-public static void sortedListInDescendingOrder(List<String> myData)
-{
-     myData.stream().sorted(Comparator.reverseOrder()).forEach(System.out::println);
+import java.util.*;
 
+public class Person {
+
+   String name;
+   int age;
+
+    public Person(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+
+}
+
+import java.util.Comparator;
+
+public class OrderingManagement implements Comparator<Person>
+{
+
+    @Override
+    public int compare(Person o1, Person o2) {
+        if(o1.age<o2.age)
+            return 1;
+        return -1;
+    }
+}
+
+public class ClientBased{
+    public static void main(String[] args)
+    {
+        List<Person> listOfData=new ArrayList<Person>();
+        listOfData.add(new Person("Mark",20));
+        listOfData.add(new Person("Sam",30));
+        listOfData.add(new Person("RAM",45));
+        Collections.sort(listOfData,new OrderingManagement());
+        for(Person s:listOfData)
+        {
+            System.out.println("Sorting occurs in descending order "+s.name);
+        }
+    }
 }
