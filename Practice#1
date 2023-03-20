@@ -1,103 +1,32 @@
 import javax.swing.text.html.HTMLDocument;
 import java.util.*;
 
-public class CustomList implements List {
-Collection myOwnList=new ArrayList();
-    @Override
-    public int size() {
-        return 0;
+public class CustomList extends AbstractList<Integer> {
+Integer size;
+
+    public CustomList(Integer size) {
+        this.size = size;
     }
 
+    @Override
+    public int size() {
+        return this.size;
+    }
+    @Override
+    public Integer get(int index) {
+        return index;
+    }
     @Override
     public boolean isEmpty() {
         return false;
     }
 
-    @Override
-    public boolean contains(Object o) {
-        if(!myOwnList.contains(o))
-           return false;
-      return true;
+
+    public static void main(String[] args) {
+        List<Integer> list = new CustomList(5);
+        for (int i : list) {
+            System.out.println(i);
+        }
     }
 
-    @Override
-    public Iterator iterator() {
-        Iterator iterator=myOwnList.iterator();
-        return iterator;
-    }
-
-    @Override
-    public Object[] toArray() {
-        return myOwnList.toArray();
-    }
-
-    @Override
-    public boolean add(Object o) {
-        myOwnList.add(o);
-        if(myOwnList.contains(0))
-            return true;
-        return false;
-    }
-
-    @Override
-    public boolean remove(Object o) {
-        myOwnList.remove(o);
-        if(myOwnList.contains(0))
-            return false;
-        return true;
-    }
-
-    @Override
-    public boolean addAll(Collection c) {
-        if(myOwnList.containsAll(c))
-            return true;
-        return false;
-    }
-
-    @Override
-    public boolean addAll(int index, Collection c) {
-        return false;
-    }
-
-    @Override
-    public void clear() {
-
-    }
-
-    @Override
-    public Object get(int index) {
-        return null;
-    }
-
-    @Override
-    public Object set(int index, Object element) {
-        return null;
-    }
-
-    @Override
-    public void add(int index, Object element) {
-
-    }
-
-    @Override
-    public Object remove(int index) {
-        return null;
-    }
-
-    @Override
-    public int indexOf(Object o) {
-        return 0;
-    }
-
-    @Override
-    public int lastIndexOf(Object o) {
-        return 0;
-    }
-
-    @Override
-    public ListIterator listIterator() {
-        return (ListIterator) myOwnList;
-    }
-    
-    
 }
