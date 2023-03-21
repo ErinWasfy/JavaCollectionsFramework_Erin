@@ -1,8 +1,10 @@
-//Assume that we have a function that returns a list of objects
+public class CustomDataSet {
+    public final static Set<String> unmodifiedSet;
+    static {
+        Set<String> setOfValues=new HashSet<>();
+        setOfValues.add("Mark");
+        setOfValues.add("Tram");
+        unmodifiedSet= Collections.unmodifiableSet(setOfValues);
+    }
 
-private final static Collection<? super Object> myColl;
-static {
-    Set<? super Object> myList=new HashSet<>();
-    myList.add("Test");
-    myColl=myList;
 }
