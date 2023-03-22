@@ -14,15 +14,30 @@ public class ComparatorForStringFromSecondChar implements Comparator<String> {
         else return -1;
     }
 }
-public class ComparatorForStringFromSecondCharManagement{
+class ComparatorForStringFromSecondCharTest {
+    Set<String> fullData;
 
-    public static void main(String[] args)
-    {
-        Set<String> fullData=new TreeSet<String>(new WorkPriorityStatus());
-        fullData.add("Severe");
-        fullData.add("High");
-        fullData.add("Low");
-       System.out.println("My work priorities in descending order is-- " + fullData);
+    @org.junit.jupiter.api.BeforeEach
+    void setUp() {
+        fullData=new TreeSet<String>(new ComparatorForStringFromSecondChar());
+        fullData.add("ab");
+        fullData.add("");
+        fullData.add("null");
+        fullData.add("b");
+        fullData.add("ac");
 
-     }
+    }
+
+    @org.junit.jupiter.api.AfterEach
+    void tearDown() {
+    }
+
+    @org.junit.jupiter.api.Test
+    void compare() {
+    }
+   @Test
+   public void shouldCompareByReversingOrder() throws Exception
+   {
+        assertEquals(Set.of("ac","b","ab"),fullData);
+   }
 }
