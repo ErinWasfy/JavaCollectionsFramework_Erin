@@ -42,7 +42,7 @@ public class OrderingManagement implements Comparator<Person>
     }
 }
 
-public class ClientBased{
+public class ComparatorForStringByDescendingOrder{
     public static void main(String[] args)
     {
         List<Person> listOfData=new ArrayList<Person>();
