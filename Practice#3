@@ -31,7 +31,7 @@ public class Person {
 
 import java.util.Comparator;
 
-public class OrderingManagement implements Comparator<Person>
+public class ComparatorForString implements Comparator<Person>
 {
 
     @Override
@@ -49,7 +49,7 @@ public class ComparatorForStringByDescendingOrder{
         listOfData.add(new Person("Mark",20));
         listOfData.add(new Person("Sam",30));
         listOfData.add(new Person("RAM",45));
-        Collections.sort(listOfData,new OrderingManagement());
+        Collections.sort(listOfData,new ComparatorForString());
         for(Person s:listOfData)
         {
             System.out.println("Sorting occurs in descending order "+s.name);
