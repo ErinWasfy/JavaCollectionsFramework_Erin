@@ -1,7 +1,7 @@
 import javax.swing.text.html.HTMLDocument;
 import java.util.*;
 
-public class CustomList extends AbstractList<Integer> {
+public class ListFromAbstractList extends AbstractList<Integer> {
 Integer size;
 
     public CustomList(Integer size) {
