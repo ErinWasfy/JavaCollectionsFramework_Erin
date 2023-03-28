@@ -1,4 +1,4 @@
-public class UnmodificationOperationForFinalStaticKeyword{
+public class ModificationDisallowedForFinalStaticKeyword{
     public final static Set<String> unmodifiedSet;
     static {
         Set<String> setOfValues=new HashSet<>();
