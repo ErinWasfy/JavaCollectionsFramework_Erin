@@ -1,10 +1,10 @@
 import javax.swing.text.html.HTMLDocument;
 import java.util.*;
 
-public class ListFromAbstractList extends AbstractList<Integer> {
+public class Book extends AbstractList<Integer> {
 Integer size;
 
-    public CustomList(Integer size) {
+    public Book(Integer size) {
         this.size = size;
     }
 
@@ -23,7 +23,7 @@ Integer size;
 
 
     public static void main(String[] args) {
-        List<Integer> list = new CustomList(5);
+        List<Integer> list = new Book(5);
         for (int i : list) {
             System.out.println(i);
         }
